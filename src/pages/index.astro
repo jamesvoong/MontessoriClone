@@ -1,0 +1,161 @@
+---
+// src/pages/index.astro — Home
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Welcome"
+  description="Monkey Tree Montessori Preschool — A nurturing environment where children ages 2½–6 learn at their own pace."
+>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">🍃 Montessori Preschool · Ages 2½–6</div>
+        <h1>Welcome to<br/>Monkey Tree<br/>Montessori</h1>
+        <p class="hero__tagline">
+          A nurturing environment where children learn at their own pace.
+        </p>
+        <div class="hero__actions">
+          <a href="/registration" class="btn btn--primary">Enroll Now</a>
+          <a href="/curriculum"   class="btn btn--outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       INTRO / ABOUT
+  ══════════════════════════════ -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro__inner">
+
+        <div class="intro__text">
+          <h2>A Place to Grow,<br/>Discover &amp; Thrive</h2>
+          <p>
+            Welcome to Monkey Tree Montessori Preschool Inc. We offer an enriched preschool
+            program for children 2½–6 yrs. Monkey Tree Montessori Preschool is an environment
+            where children's educational, physical and emotional needs are met.
+          </p>
+          <p>
+            Children have the freedom to learn at their own pace with no competition or
+            external rewards — therefore developing self creation during their formative
+            years of life.
+          </p>
+          <div style="margin-top:1.75rem; display:flex; flex-wrap:wrap; gap:0.75rem;">
+            <a href="/curriculum"   class="btn btn--outline-dark">Explore Curriculum</a>
+            <a href="/registration" class="btn btn--primary">Register Today</a>
+          </div>
+        </div>
+
+        <div class="intro__visual">
+          <div class="intro__visual-box">
+            <span class="intro__visual-emoji">🌿</span>
+            <h3>The Montessori Difference</h3>
+            <p>Child-led learning rooted in respect, independence, and joy.</p>
+            <div class="intro__stats">
+              <div class="stat">
+                <span class="stat__num">15+</span>
+                <span class="stat__label">Years</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">2½–6</span>
+                <span class="stat__label">Ages</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">7</span>
+                <span class="stat__label">Areas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       FEATURE CARDS
+  ══════════════════════════════ -->
+  <section class="features-section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <h2>Why Monkey Tree?</h2>
+        <div class="section__divider"></div>
+        <p class="lead">Everything we do is designed to nurture the whole child — mind, body, and spirit.</p>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap">🐾</div>
+          <h3>Learn at Your Pace</h3>
+          <p>
+            No competition, no external rewards. Children explore and discover at a
+            rhythm that's right for them.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap">📐</div>
+          <h3>Montessori Method</h3>
+          <p>
+            Scientifically designed materials and a prepared environment that ignite
+            natural curiosity and deep learning.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap">🌍</div>
+          <h3>Multicultural Community</h3>
+          <p>
+            We celebrate diverse cultures, languages, and traditions — raising
+            globally-minded, empathetic children.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       GOVERNMENT SUBSIDY BANNER
+  ══════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="subsidy-banner">
+        <h3>🎉 Government Funding Available</h3>
+        <p>
+          Monkey Tree Montessori is approved for the <strong>Child Care Fee Reduction
+          Initiative (CCFRI)</strong>, reducing monthly fees from $595 to <strong>$500</strong>.
+        </p>
+        <div style="margin-top:1.5rem;">
+          <a href="/registration" class="btn btn--outline">Learn About Registration</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CTA STRIP
+  ══════════════════════════════ -->
+  <section class="section--alt section" style="padding-block:3.5rem;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:var(--color-primary); margin-bottom:0.75rem;">
+        Ready to Start Your Child's Journey?
+      </h2>
+      <p style="color:var(--color-text-muted); margin-inline:auto; margin-bottom:2rem;">
+        Get in touch — we'd love to welcome your family to our community.
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+        <a href="/contact"      class="btn btn--primary">Contact Us</a>
+        <a href="/registration" class="btn btn--outline-dark">View Class Times</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

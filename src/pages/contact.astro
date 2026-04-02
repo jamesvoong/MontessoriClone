@@ -1,0 +1,192 @@
+---
+// src/pages/contact.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Get in touch with Monkey Tree Montessori Preschool. Call, email, or fill out our contact form."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / Contact</p>
+      <h1>Contact Us</h1>
+      <p class="page-hero__lead">
+        We'd love to hear from you. Reach out and we'll get back to you soon.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Layout -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Contact Info Panel -->
+        <div>
+          <div class="hours-badge">Open Mon–Fri · 8:00 am – 4:00 pm</div>
+
+          <h2 style="color:var(--color-primary); margin-bottom:0.5rem;">Get in Touch</h2>
+          <p style="color:var(--color-text-muted); margin-bottom:2rem;">
+            Whether you have questions about enrollment, curriculum, or just want to say hello —
+            we're here for you.
+          </p>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📞</span>
+            <div>
+              <p class="contact-info__label">Phone</p>
+              <p class="contact-info__value">
+                <a href="tel:6046778339">604-677-8339</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">✉️</span>
+            <div>
+              <p class="contact-info__label">Email</p>
+              <p class="contact-info__value">
+                <a href="mailto:Montessori.monkeytree@gmail.com">Montessori.monkeytree@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">📸</span>
+            <div>
+              <p class="contact-info__label">Instagram</p>
+              <p class="contact-info__value">
+                <a href="https://www.instagram.com/monkeytreepreschool" target="_blank" rel="noopener noreferrer">
+                  @monkeytreepreschool
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">🕐</span>
+            <div>
+              <p class="contact-info__label">Office Hours</p>
+              <p class="contact-info__value">Mon–Fri: 8:00 am – 4:00 pm<br/>Sat–Sun: Closed</p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <span class="contact-info__icon">🎒</span>
+            <div>
+              <p class="contact-info__label">Class Times</p>
+              <p class="contact-info__value">
+                Morning: 8:30 am – 11:30 am<br/>
+                Afternoon: 12:30 pm – 3:30 pm
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <p class="form-intro">Fill out the form below and we'll be in touch shortly.</p>
+
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <!-- Netlify hidden field -->
+            <input type="hidden" name="form-name" value="contact" />
+
+            <!-- Honeypot -->
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Name + Email -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Jane Smith"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="jane@example.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Phone + Child's Age -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone <span class="optional">(optional)</span></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="604-555-0100"
+                />
+              </div>
+              <div class="form-group">
+                <label for="child-age">Child's Age</label>
+                <select id="child-age" name="child_age" required>
+                  <option value="" disabled selected>Select age…</option>
+                  <option value="2.5">2½ years</option>
+                  <option value="3">3 years</option>
+                  <option value="4">4 years</option>
+                  <option value="5">5 years</option>
+                  <option value="6">6 years</option>
+                  <option value="other">Other / Not sure</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your child, or ask us anything…"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Send Message 🌱
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Enrollment CTA -->
+  <section class="section--alt section" style="padding-block:3.5rem;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:var(--color-primary); margin-bottom:0.75rem;">
+        Ready to Enroll?
+      </h2>
+      <p style="color:var(--color-text-muted); margin-inline:auto; margin-bottom:2rem;">
+        View class times, pricing, and registration details on our Registration page.
+      </p>
+      <a href="/registration" class="btn btn--primary">View Registration Info</a>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,101 @@
+---
+// src/pages/curriculum.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const areas = [
+  {
+    icon: '🏠',
+    title: 'Practical Life',
+    desc: 'The purpose of Practical Life is to develop concentration, independence and control of movement. The material found in this area is related to daily living skills which may be familiar to a child, therefore easing the transition from home to school.',
+  },
+  {
+    icon: '👀',
+    title: 'Sensorial',
+    desc: 'The materials and activities in this area allow children to refine their five senses as well as classify sensorial impressions and sort by size, shape, color, touch, sound, and weight. This builds a concrete foundation for abstract learning later.',
+  },
+  {
+    icon: '📚',
+    title: 'Language',
+    desc: 'The purpose of the Language area is the enrichment of vocabulary, phonetic recognition of sounds and letters and the development of writing and reading. Our program is a phonetic based program. French and Spanish are also introduced as second languages.',
+  },
+  {
+    icon: '🔢',
+    title: 'Mathematics',
+    desc: 'The purpose of Math is to introduce numbers 1 to 1000 and to create an understanding of the four different mathematical concepts through the decimal system. Hands-on materials make abstract concepts concrete and accessible.',
+  },
+  {
+    icon: '🌍',
+    title: 'Geography',
+    desc: 'Children are exposed to the different ways people live around the world. Moving from general to specific concepts, children are introduced to the 7 continents, countries, landforms, and the incredible diversity of our global community.',
+  },
+  {
+    icon: '🌿',
+    title: 'Play',
+    desc: 'Our play experiences include nature walks, outdoor exploration, and sharing what we see and discover. Children engage in LEGO building, insect hunts, leaf hunts, and planting fruits and vegetables — connecting learning to the living world.',
+  },
+  {
+    icon: '🎉',
+    title: 'Culture Learning',
+    desc: 'We celebrate diverse cultures by inviting children to share how they celebrate their holidays, reading cultural stories together, learning different languages and songs, and hosting potlucks that bring our whole community together.',
+  },
+];
+---
+
+<BaseLayout
+  title="Montessori Curriculum"
+  description="Explore the seven curriculum areas at Monkey Tree Montessori — from Practical Life to Geography and Culture Learning."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / Curriculum</p>
+      <h1>Montessori Curriculum</h1>
+      <p class="page-hero__lead">
+        A rich, scientifically designed environment spanning seven key areas of development.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:780px; margin-inline:auto; text-align:center; margin-bottom:3.5rem;">
+        <p style="font-size:1.08rem; color:var(--color-text-muted);">
+          The Montessori classroom is comprised of four major curriculum areas:
+          <strong>Practical Life, Sensorial, Language, and Mathematics</strong> — along with
+          Geography, Play, and Culture Learning. All material was scientifically designed by
+          <strong>Dr. Maria Montessori</strong> to meet the developmental needs of children during
+          their most sensitive years.
+        </p>
+      </div>
+
+      <div class="curriculum-grid">
+        {areas.map(area => (
+          <div class="curriculum-card">
+            <span class="curriculum-card__icon">{area.icon}</span>
+            <h3 class="curriculum-card__title">{area.title}</h3>
+            <p class="curriculum-card__desc">{area.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section--alt section" style="padding-block:3.5rem;">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:var(--color-primary); margin-bottom:0.75rem;">
+        Want to See It in Action?
+      </h2>
+      <p style="color:var(--color-text-muted); margin-inline:auto; margin-bottom:2rem;">
+        Schedule a visit to meet our teachers and explore the classroom environment.
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;">
+        <a href="/contact"      class="btn btn--primary">Book a Visit</a>
+        <a href="/registration" class="btn btn--outline-dark">Class Times &amp; Pricing</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,122 @@
+---
+// src/pages/maria-montessori.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Maria Montessori"
+  description="Learn about Dr. Maria Montessori — the pioneering educator who founded the Montessori Method over a century ago."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / About Maria Montessori</p>
+      <h1>About Maria Montessori</h1>
+      <p class="page-hero__lead">
+        The visionary educator whose method has shaped childhood for over a century.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="section">
+    <div class="container">
+
+      <div class="bio-block">
+
+        <div style="display:flex; align-items:flex-start; gap:2rem; margin-bottom:2rem; flex-wrap:wrap;">
+          <div style="flex-shrink:0; width:90px; height:90px; border-radius:50%; background:linear-gradient(135deg,var(--color-secondary),var(--color-primary)); display:flex; align-items:center; justify-content:center; font-size:3.5rem; box-shadow:var(--shadow-md);">👩‍🔬</div>
+          <div>
+            <h2 style="color:var(--color-primary); margin-bottom:0.25rem;">Dr. Maria Montessori</h2>
+            <p style="color:var(--color-text-muted); font-size:0.92rem; margin-bottom:0; max-width:none;">1870–1952 · Chiaravalle, Italy · Physician &amp; Educator</p>
+          </div>
+        </div>
+
+        <p>
+          Maria Montessori was born in 1870, Chiaravalle, Italy. Montessori was the first woman
+          to graduate from University of Roma La Sapienza and became the <strong>first female
+          doctor in Italy</strong>. Through her scientific observation and medical practice, she
+          studied how children learn and established that education is not what the teacher gives
+          but is a process that is spontaneously carried out by what an individual finds in the
+          environment that surrounds him/her.
+        </p>
+
+        <p>
+          In 1907, she founded the first school for children called
+          <strong>"Casa dei Bambini"</strong> or <strong>"Children's House"</strong>. Through
+          her observation, she developed specialized material which enabled children to absorb
+          knowledge effortlessly from their surroundings. There she developed what is now known
+          as the <strong>"Montessori Method"</strong> or <strong>"Montessori Approach"</strong>,
+          which focuses on quality rather than quantity. The success of her school created
+          interest in surrounding countries and is now internationally known.
+        </p>
+
+        <p>
+          Since her creation began, there have been many associations created in her name. Some
+          have altered her methods and amalgamated them with other philosophies. At Monkey Tree
+          Montessori Preschool, we follow what Dr. Montessori created over a hundred years ago.
+          It is a method that has lasted over a century and continues to gain popularity from
+          its success.
+        </p>
+
+      </div>
+
+      <!-- Quote -->
+      <div class="quote-block">
+        <blockquote>
+          "The greatest sign of success for a teacher is to be able to say, 'The children are now working as if I did not exist.'"
+        </blockquote>
+        <cite>— Dr. Maria Montessori</cite>
+      </div>
+
+      <!-- Timeline / Key Facts -->
+      <div style="margin-top:3rem; max-width:860px; margin-inline:auto;">
+        <h2 style="color:var(--color-primary); text-align:center; margin-bottom:2rem;">Key Milestones</h2>
+        <div class="grid-2">
+
+          <div class="card">
+            <span class="card__icon">🎓</span>
+            <h4 class="card__title">1870 — Born in Italy</h4>
+            <p class="card__body">Born on August 31 in Chiaravalle, Italy. Showed exceptional academic ability from an early age.</p>
+          </div>
+
+          <div class="card">
+            <span class="card__icon">👩‍⚕️</span>
+            <h4 class="card__title">1896 — First Female Doctor</h4>
+            <p class="card__body">Became Italy's first female physician after graduating from the University of Rome La Sapienza.</p>
+          </div>
+
+          <div class="card">
+            <span class="card__icon">🏫</span>
+            <h4 class="card__title">1907 — Casa dei Bambini</h4>
+            <p class="card__body">Founded the first "Children's House" in Rome's San Lorenzo district, serving children ages 3–6.</p>
+          </div>
+
+          <div class="card">
+            <span class="card__icon">🌐</span>
+            <h4 class="card__title">1920s–40s — Global Spread</h4>
+            <p class="card__body">The Montessori Method spread across Europe, the Americas, and Asia — gaining international recognition.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Our Commitment -->
+  <section class="section--alt section" style="padding-block:3.5rem;">
+    <div class="container" style="text-align:center; max-width:760px; margin-inline:auto;">
+      <h2 style="color:var(--color-primary); margin-bottom:1rem;">Our Commitment to Authentic Montessori</h2>
+      <p style="color:var(--color-text-muted); font-size:1.05rem;">
+        At Monkey Tree, we honour Dr. Montessori's original vision. We follow the method she
+        created over a hundred years ago — unchanged and uncompromised — because it works.
+      </p>
+      <div style="margin-top:2rem;">
+        <a href="/curriculum" class="btn btn--primary">Explore Our Curriculum</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

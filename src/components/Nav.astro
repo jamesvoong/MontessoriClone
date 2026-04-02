@@ -1,0 +1,66 @@
+---
+// Nav.astro — sticky navigation with mobile hamburger
+const navLinks = [
+  { href: '/',                   label: 'Home' },
+  { href: '/curriculum',         label: 'Curriculum' },
+  { href: '/maria-montessori',   label: 'About Maria' },
+  { href: '/registration',       label: 'Registration' },
+  { href: '/contact',            label: 'Contact',  cta: true },
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+
+      <a href="/" class="nav__logo">
+        <span aria-hidden="true">🌳</span>
+        <div>
+          Monkey Tree Montessori
+          <span>Preschool Inc.</span>
+        </div>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks" role="list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class={link.cta ? 'nav__cta' : ''}
+              aria-current={pathname === link.href ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = links?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close menu when a link is clicked
+  links?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

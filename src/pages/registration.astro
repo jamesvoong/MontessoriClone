@@ -1,0 +1,145 @@
+---
+// src/pages/registration.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Class Times & Registration"
+  description="Enroll your child at Monkey Tree Montessori. Morning and afternoon classes available, with government subsidy options."
+>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">Home</a> / Registration</p>
+      <h1>Class Times &amp; Registration</h1>
+      <p class="page-hero__lead">
+        Everything you need to know about enrolling your child at Monkey Tree.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items:start; margin-bottom:2.5rem;">
+
+        <!-- Who Can Enroll -->
+        <div class="info-card">
+          <h3>👶 Who Can Enroll?</h3>
+          <p>
+            We accept children from <strong>ages 2½</strong> (as long as they turn 3 by the end
+            of the calendar year) to <strong>5 years old</strong>.
+          </p>
+        </div>
+
+        <!-- How to Register -->
+        <div class="info-card">
+          <h3>📋 How to Register</h3>
+          <p>
+            In order to register, please contact the school by email or by phone. We will
+            schedule an appointment for you and your child to come and <strong>visit the
+            school</strong>, meet the teachers, and answer any questions you may have.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Pricing Table -->
+      <div class="info-card" style="margin-bottom:2.5rem;">
+        <h3>💰 Classes &amp; Pricing</h3>
+
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Days</th>
+              <th>Hours</th>
+              <th>Monthly Fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Morning Class</strong></td>
+              <td>Monday – Friday</td>
+              <td>8:30 a.m. – 11:30 a.m.</td>
+              <td class="price">$595/month</td>
+            </tr>
+            <tr>
+              <td><strong>Afternoon Class</strong></td>
+              <td>Monday – Friday</td>
+              <td>12:30 p.m. – 3:30 p.m.</td>
+              <td class="price">$595/month</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="fee-note">
+          ⚠️ All classes require a <strong>$100 non-refundable registration fee</strong> payable at the time of enrollment.
+        </p>
+      </div>
+
+      <!-- Subsidy Banner -->
+      <div class="subsidy-banner" style="margin-bottom:2.5rem;">
+        <h3>🎉 Government Subsidy Available</h3>
+        <p>
+          We are thrilled to share that Monkey Tree Montessori is approved for the government
+          funding program, <strong>Child Care Fee Reduction Initiative (CCFRI)</strong>, which
+          reduces the monthly fee from <strong>$595 to $500</strong>.
+        </p>
+        <p style="margin-top:0.75rem; font-size:0.92rem;">
+          Ask us about eligibility and how to apply when you contact us.
+        </p>
+      </div>
+
+      <!-- Contact to Register -->
+      <div class="info-card" style="text-align:center;">
+        <h3 style="justify-content:center;">📞 Ready to Register?</h3>
+        <p style="margin-bottom:1.5rem;">
+          Contact us today to schedule your visit and get your child started on their
+          Montessori journey.
+        </p>
+        <div class="contact-cta-box">
+          <a href="tel:6046778339" class="btn btn--primary">📞 604-677-8339</a>
+          <a href="mailto:Montessori.monkeytree@gmail.com" class="btn btn--outline-dark">✉️ Email Us</a>
+          <a href="/contact" class="btn btn--outline-dark">Contact Form</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section--alt section">
+    <div class="container">
+      <div class="section__header">
+        <h2>What to Expect</h2>
+        <div class="section__divider"></div>
+        <p class="lead">Our enrollment process is simple and welcoming.</p>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap">📞</div>
+          <h3>1. Reach Out</h3>
+          <p>Call or email us. We'll answer your questions and set up a time to visit.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap">🏫</div>
+          <h3>2. Visit the School</h3>
+          <p>You and your child come to tour the classroom, meet the teachers, and feel at home.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon-wrap">🌱</div>
+          <h3>3. Begin the Journey</h3>
+          <p>Complete registration and watch your child blossom in our nurturing environment.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
